@@ -3,17 +3,15 @@
 
 #include <iostream>
 #include <fstream>
-#include <algorithm>
 #include <string>
 #include <sstream>
 
 namespace BookContainer {
-    BookList::BookList() : books(new Book[10]), capacity(10), size(0) {
+    BookList::BookList(){
 
     }
 
     BookList::~BookList() {
-        delete[] books;
     }
 
     void BookList::addBook() {
@@ -37,8 +35,8 @@ namespace BookContainer {
     }
     void BookList::displayInfo(int id, const std::string& title, const std::string& author) const {
         std::cout << "ID: " << id << std::endl;
-        std::cout << "Íàçâàíèå: " << title << std::endl;
-        std::cout << "Àâòîð: " << author << std::endl;
+        std::cout << "Название: " << title << std::endl;
+        std::cout << "Автор: " << author << std::endl;
         std::cout << std::endl;
     }
 
@@ -94,10 +92,10 @@ namespace BookContainer {
 
             std::remove(filename.c_str()); 
             std::rename("temp.txt", filename.c_str()); 
-            std::cout << "Èíôîðìàöèÿ î êíèãå ñ ID " << idToUpdate << " îáíîâëåíà." << std::endl;
+            std::cout << "Информация о книге с ID " << idToUpdate << " обновлена." << std::endl;
         }
         else {
-            std::cout << "Îøèáêà îòêðûòèÿ ôàéëîâ." << std::endl;
+            std::cout << "Ошибка открытия файлов." << std::endl;
     }
 }
     

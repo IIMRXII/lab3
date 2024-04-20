@@ -6,9 +6,6 @@
 namespace BookContainer {
     class BookList {
     private:
-        Book* books;
-        int capacity;
-        int size;
 
     public:
         BookList();
@@ -24,3 +21,4 @@ namespace BookContainer {
 }
 
 #endif
+

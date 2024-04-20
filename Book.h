@@ -12,8 +12,8 @@ private:
 public:
     void displayInfo() const {
         std::cout << "ID: " << id << std::endl;
-        std::cout << "Íàçâàíèå: " << title << std::endl;
-        std::cout << "Àâòîð: " << author << std::endl;
+        std::cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ: " << title << std::endl;
+        std::cout << "ÐÐ²Ñ‚Ð¾Ñ€: " << author << std::endl;
     }
     Book(int id, const std::string& title, const std::string& author);
     friend std::istream& operator>>(std::istream& is, Book& book);
